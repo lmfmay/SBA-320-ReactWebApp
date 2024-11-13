@@ -27,16 +27,16 @@ function UserProfile() {
       <div className="user-profile">
         <h2>{name}</h2>
         <p>{description}</p>
-        {/* <button onClick={handlePlayAudio} disabled={loading}>
-          {loading ? 'Loading...' : 'Play Audio'}
+        <button onClick={handlePlayAudio} disabled={playing}>
+          {playing ? 'Loading...' : 'Play Audio'}
         </button>
   
-        {audioUrl && (
+        {audio && (
           <audio controls autoPlay>
-            <source src={audioUrl} type="audio/mp3" />
+            <source src={audio} type="audio/mp3" />
             Your browser does not support the audio element.
           </audio>
-        )} */}
+        )}
       </div>
     );
   }
