@@ -6,17 +6,19 @@ function UserProfile() {
     const [audio, setAudio] = useState(null); //get audio data from third party API
     const [playing, setPlaying] = useState(false) //set state of audio playing/notplaying
 
-    const [name, description, textToAudio] = [
-        userProfiles.map((userProfile)=>userProfile.name),
-        userProfiles.map((userProfile)=>userProfile.description),
-        userProfiles.map((userProfile)=>userProfile.textToAudio)
-    ]
+    // const [name, description, textToAudio] = [
+    //     userProfiles.map((userProfile)=>userProfile.name),
+    //     userProfiles.map((userProfile)=>userProfile.description),
+    //     userProfiles.map((userProfile)=>userProfile.textToAudio)
+    // ]
   
-    async function handlePlayAudio(){
+
+    async function handlePlayAudio(textToAudio){
         setPlaying(true)
         let res = await getAudio(textToAudio);
         setAudio(res)
         setPlaying(false)
+        //console.log(textToAudio)
     }
     // const handlePlayAudio = async () => {
     //   setLoading(true);
@@ -25,18 +27,25 @@ function UserProfile() {
   
     return (
       <div className="user-profile">
-        <h2>{name}</h2>
-        <p>{description}</p>
-        <button onClick={handlePlayAudio} disabled={playing}>
-          {playing ? 'Loading...' : 'Play Audio'}
-        </button>
-  
-        {audio && (
-          <audio controls autoPlay>
-            <source src={audio} type="audio/mp3" />
-            Your browser does not support the audio element.
-          </audio>
-        )}
+        {userProfiles.map (userProfile => {
+            return(
+                <>
+                    <h2>{userProfile.name}</h2>
+                    <p>{userProfile.description}</p>
+                    <p>{userProfile.textToAudio}</p>
+                    <button onClick={()=>handlePlayAudio(userProfile.textToAudio)} disabled={playing}>
+                    {playing ? 'Loading...' : 'Play Audio'}
+                    </button>
+            
+                    {audio && (
+                    <audio controls autoPlay>
+                        <source src={audio} type="audio/mp3" />
+                        Your browser does not support the audio element.
+                    </audio>
+                    )}
+                </>
+            )
+        })}
       </div>
     );
   }
