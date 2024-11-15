@@ -4,15 +4,15 @@ function UserCard () {
   return (
     userProfiles.map((profile)=>{
       return (
-        <div className="userCardContain">
-          <img></img>
-          <h3>{profile.name}</h3>
-          <p>{profile.description}</p>
-        </div>
+          <div className="userCard">
+            <img></img>
+            <h3>{profile.name}</h3>
+            <p>{profile.description}</p>
+          </div>
       )
     })
     
   );
 }
 
-return UserCard
+export default UserCard
