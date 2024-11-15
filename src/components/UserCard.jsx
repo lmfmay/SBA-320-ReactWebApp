@@ -1,17 +1,12 @@
-import { userProfiles } from "../utilities/data.mjs";
+function UserCard ({name, description}) {
+  // const [{name, description}] = userProfiles.map(profile => [profile.name, profile.description]);
 
-function UserCard () {
   return (
-    userProfiles.map((profile)=>{
-      return (
-          <div className="userCard">
-            <img></img>
-            <h3>{profile.name}</h3>
-            <p>{profile.description}</p>
-          </div>
-      )
-    })
-    
+    <div className="userCard">
+      <img></img>
+      <h3>{name}</h3>
+      <p>{description}</p>
+    </div>
   );
 }
 

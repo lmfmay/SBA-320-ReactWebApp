@@ -1,8 +1,10 @@
-import { useState, useEffect } from 'react'
-import './App.css'
-import UserProfile from './components/UserCard'
-import AudioPlayer from './components/AudioPlayer'
-import { getAudio } from './utilities/controllers.mjs'
+import { useState, useEffect } from 'react';
+import './App.css';
+import UserCardCollection from './components/UserCardCollection';
+import NavBar from './components/NavBar';
+import AudioPlayer from './components/AudioPlayer';
+import { getAudio } from './utilities/controllers.mjs';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
 //   const [audio, setAudio] = useState(null); //get audio data from third party API
@@ -22,10 +24,11 @@ function App() {
   
   return (
     <>
-      <section className='userCardContain'>
-        <UserProfile />
-      </section>
-      {/* <AudioPlayer src={audio}/> */}
+      <NavBar/>
+      <Routes>
+        <Route path = '/' element = {<UserCardCollection/>}/>
+        {/* <AudioPlayer src={audio}/> */}
+      </Routes>
     </>
   )
 }
