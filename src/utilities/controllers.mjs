@@ -10,7 +10,7 @@ async function getAudio(textToAudio){
                 output_format: 'mp3',
                 text: `${textToAudio}`
           });
-          console.log(response.data);
+          return(response.data);
         } catch (error) {
           console.error(error);
         };
