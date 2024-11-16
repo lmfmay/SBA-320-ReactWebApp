@@ -1,18 +1,8 @@
-import UserCard from "./UserCard";
 import { getAudio } from "../../utilities/controllers.mjs";
 import { userProfiles } from '../../utilities/data.mjs';
 import {useState, useEffect} from 'react';
+import UserCard from "./UserCard";
 
-// function UserCardCollection () {
-//     const userCards = userProfiles.map((profile, i)=>{
-//         return <UserCard key = {i} {...profile}/>
-//     })
-//     return (
-//         <section className='userCardContain'>
-//             {userCards}
-//         </section>
-//     )
-// }
 
 function UserCardCollection() {
     const [audioProfiles, setAudioProfiles] = useState([]);
@@ -23,7 +13,7 @@ function UserCardCollection() {
     useEffect(() => {
       async function fetchAudioProfiles() {
         try {
-          let res = await getAudio(); // Assume getAudio fetches all profiles
+          let res = await getAudio(); // get audio profiles from controller
           setAudioProfiles(res.data);
           setLoading(false);
         } catch (err) {
@@ -46,19 +36,23 @@ function UserCardCollection() {
   
     // Map user profiles to user cards and pass the relevant audio profile
     const userCards = userProfiles.map((profile, i) => {
-      // Find the matching audio profile for the user's voice_sample
-      const audioProfile = audioProfiles.find((audio) => audio.id === profile.voice_sample);
-  
-      return (
+        // Find the matching audio profile for the user's voice_sample
+        const audioProfile = audioProfiles.find((audio) => audio.id === profile.voice_sample);
+
+        return (
         <UserCard
-          key={i}
-          {...profile}
-          audioProfile={audioProfile} // Pass down the audio profile
+            key={i}
+            {...profile}
+            audioProfile={audioProfile} // Pass down the audio profile as prop
         />
-      );
+        );
     });
   
-    return <section className="userCardContain">{userCards}</section>;
+    return (
+        <section className="userCardContain">
+            {userCards}
+        </section>
+    );
   }
 
 export default UserCardCollection
