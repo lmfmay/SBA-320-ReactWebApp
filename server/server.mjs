@@ -1,6 +1,7 @@
 import express from 'express';
 import axios from 'axios';
 import dotenv from 'dotenv';
+import cors from 'cors';
 
 //configs
 dotenv.config({path: '../.env'});
@@ -9,6 +10,7 @@ const app = express();
 const PORT = 3000;
 
 //middleware
+app.use(cors())
 app.use(express.json({ extended: false }));
 
 //.env variables
