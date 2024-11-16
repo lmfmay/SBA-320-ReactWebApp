@@ -5,7 +5,7 @@ function UserCard({ name, description, audioProfile }) {
 
   return (
     <div className="userCard">
-      <img alt={`${name}'s avatar`} />
+      {/* <img alt={`${name}'s avatar`} /> */}
       <h3>{name}</h3>
       <p>{description}</p>
       {userAudioSrc ? <AudioPlayer url={userAudioSrc} /> : <p>No audio available</p>}
