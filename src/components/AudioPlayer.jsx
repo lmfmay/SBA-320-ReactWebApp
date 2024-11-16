@@ -16,7 +16,7 @@ function AudioPlayer({ url }) {
           audio.currentTime = 0;
         }
       };
-    }, [url]); // Dependency array ensures this runs only when `url` changes
+    }, [url]); // Runs when url changes
   
     const toggleAudio = () => {
       if (audio) {
