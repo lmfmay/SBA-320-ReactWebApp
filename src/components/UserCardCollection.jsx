@@ -1,5 +1,5 @@
 import UserCard from "./UserCard";
-import { userProfiles } from "../utilities/data.mjs";
+import { userProfiles } from '../../utilities/data.mjs';
 
 function UserCardCollection () {
     const userCards = userProfiles.map((profile, i)=>{

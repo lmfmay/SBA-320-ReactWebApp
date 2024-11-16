@@ -3,7 +3,6 @@ import './App.css';
 import UserCardCollection from './components/UserCardCollection';
 import NavBar from './components/NavBar';
 import AudioPlayer from './components/AudioPlayer';
-import { getAudio } from './utilities/controllers.mjs';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
