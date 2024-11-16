@@ -26,12 +26,12 @@ export const userProfiles = [
         voice_sample: "s3://voice-cloning-zero-shot/e5df2eb3-5153-40fa-9f6e-6e27bbb7a38e/original/manifest.json"
     },
     {
-        name: "Wilbert",
+        name: "Arthur",
         description: "A voice talent specializing in audiobooks.",
         textToAudio: "Hi",
         accent: "british",
-        gender: "female",
-        voice_sample: "//voice-cloning-zero-shot/5cd30986-f7f7-444b-ad82-d08ceb24ec5f/wilbertsaad/manifest.json"
+        gender: "male",
+        voice_sample: "s3://voice-cloning-zero-shot/38a41ac2-f574-421c-adb9-ce1bcb6f4a84/arthurmeditationsaad/manifest.json"
     },
 ]
 
@@ -87,19 +87,19 @@ export const userProfiles = [
 //     },
 
 //     {
-//         "id": "s3://voice-cloning-zero-shot/5cd30986-f7f7-444b-ad82-d08ceb24ec5f/wilbertsaad/manifest.json",
-//         "name": "Wilbert",
-//         "sample": "https://parrot-samples.s3.amazonaws.com/kettle/wilbert.wav",
-//         "accent": "british",
-//         "age": "adult",
-//         "gender": "male",
-//         "language": "English (US)",
-//         "language_code": "en-US",
-//         "loudness": "neutral",
-//         "style": "narrative",
-//         "tempo": "neutral",
-//         "texture": "round",
-//         "is_cloned": false,
-//         "voice_engine": "PlayHT2.0"
-//       },
+    //   "id": "s3://voice-cloning-zero-shot/38a41ac2-f574-421c-adb9-ce1bcb6f4a84/arthurmeditationsaad/manifest.json",
+    //   "name": "Arthur (Meditation)",
+    //   "sample": "https://peregrine-results.s3.amazonaws.com/pigeon/1kdv17L92N1otdit39_0.mp3",
+    //   "accent": "british",
+    //   "age": "adult",
+    //   "gender": "male",
+    //   "language": "English (GB)",
+    //   "language_code": "en-GB",
+    //   "loudness": "neutral",
+    //   "style": "meditation",
+    //   "tempo": "neutral",
+    //   "texture": "smooth",
+    //   "is_cloned": false,
+    //   "voice_engine": "PlayHT2.0"
+    // },
 //     ]
