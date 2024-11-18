@@ -3,14 +3,14 @@
 export const userProfiles = [
     {
         name: "Charlotte Johnson",
-        description: "A voice talent specializing in narrations and commercials.",
+        description: "A voice talent specializing in delivering personal messages and audiobook narrations.",
         accent: "canadian",
         gender: "female",
         voice_sample: "s3://voice-cloning-zero-shot/a59cb96d-bba8-4e24-81f2-e60b888a0275/charlottenarrativesaad/manifest.json"
     },
     {
         name: "David Adolfo",
-        description: "A voice talent specializing in audiobooks.",
+        description: "A voice talent specializing in audiobooks and translations.",
         accent: "american",
         gender: "male",
         voice_sample: "s3://voice-cloning-zero-shot/d82d246c-148b-457f-9668-37b789520891/adolfosaad/manifest.json"
@@ -24,7 +24,7 @@ export const userProfiles = [
     },
     {
         name: "Arthur",
-        description: "A voice talent specializing in audiobooks.",
+        description: "A voice talent specializing in podcasts and audiobooks.",
         accent: "british",
         gender: "male",
         voice_sample: "s3://voice-cloning-zero-shot/38a41ac2-f574-421c-adb9-ce1bcb6f4a84/arthurmeditationsaad/manifest.json"
